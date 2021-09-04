@@ -1,0 +1,57 @@
+<!-- Nathan Rowbottom. SNP STEAM Academy Apr 24 2020 -->
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hello Shapes</title>
+    <!-- Step 1: Need a link to some code that makes all of this possible -->
+    <!--This one is the main library we use called aframe-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+     <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.3/dist/aframe-extras.min.js"></script>
+    <!--We will add more later-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+    <script src="script.js">
+    </script>
+    <!--We will still be using tags but many of the tags will be related to the Aframe library-->
+    <!--unlike regular HTML, attributes are changed in the tags rather than the CSS file-->
+
+
+    <!--all the vr content will live inside a a-scene. Which is like a container div-->
+    <a-scene>
+
+   <a-entity id="rig"
+          movement-controls="fly: true; easingY: 30"
+          position="0 0 0">
+      <a-entity camera
+            position="0 1.6 0"
+            look-controls="pointerLockEnabled: true"></a-entity>
+  </a-entity>
+
+      <!--a-entities live in a-scenes and are containers for components-->
+      <!--there are specialized a-entities that have their own identities, like a-sky and a-text-->
+      <a-sky color="lightblue"></a-sky>
+      <!--there are specialized a-entities that have their own identities, and have been bundled together for you to allow you to easily make shapes.-->
+      <!--2D shapes-->
+      <a-circle radius ="0.5"  position = "0 2 -1" color="yellow" side="double" ></a-circle>
+      <a-plane width ="1" position = "-0.5 1 -1" color="green"  ></a-square>
+      <a-text value="Hello World!" color="purple" position="-0.5 2 -2"></a-text>
+      <!--3D shapes -->
+d
+      <a-sphere radius ="1" position = "0 2 -2" color="red" side="double" wireframe = "true" ></a-sphere>
+      
+      <a-cylinder radius = "0.5" height="1" position = " 2 0
+       -3" color = "pink"></a-cylinder>
+
+      <a-box scale = "1 2 5" position = " -2 1 -3" color = "blue" ></a-box>
+    </a-scene>
+  </body>
+
+</html>  <!--there are specialized a-entities that have their own identity-->
